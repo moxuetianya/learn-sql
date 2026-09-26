@@ -1,0 +1,20 @@
+[package]
+name = "rust-shop-api"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+# Web 框架（axum 0.8：路径参数语法是 /api/products/{id}）
+axum = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
+# 数据库（课程 16/17 主线）
+sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite", "macros"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[workspace]

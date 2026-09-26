@@ -1,0 +1,13 @@
+# Rust 构建产物
+target/
+
+# 运行时生成的数据库文件（随用随建：./setup/init.sh 或 cargo run 自动迁移）
+*.db
+*.db-wal
+*.db-shm
+
+# sqlx 离线校验数据（若启用 offline 模式则应提交 .sqlx/）
+# .sqlx/
+
+# 环境变量（教学示例保留 .env；生产项目应 gitignore）
+# .env
